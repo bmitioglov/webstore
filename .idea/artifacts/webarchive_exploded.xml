@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="webarchive:exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/webarchive_exploded</output-path>
+    <root id="root">
+      <element id="dir-copy" path="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+      <element id="module-output" name="webstore" />
+    </root>
+  </artifact>
+</component>

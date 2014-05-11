@@ -1,0 +1,135 @@
+body {
+    background-color: #2D3339;
+}
+
+a{
+    color: #FFFFFF;
+    text-decoration: none;
+
+}
+
+
+div {
+    display: inline-block;
+}
+
+#signup{
+    position: absolute;
+    right: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    top: 5px;
+    font-family: cursive;
+}
+
+#login{
+    position: absolute;
+    right: 115px;
+    font-size: 15px;
+    font-weight: bold;
+    top: 5px;
+    font-family: cursive;
+}
+
+.img{
+    height: 492px;
+    width: 987px;
+    border: 2px solid #000;
+    background: url(../img/1.jpg) 100% 100% no-repeat;
+    background-size: cover;
+    margin: auto;
+    position: absolute;
+    top: 56px;
+    left: 36px;
+    display:inline-block;
+}
+
+.button {
+    width: 110px;
+    height: 30px;
+    border: 1px solid #3D3D3F;
+    color: rgb(232, 232, 240);
+    line-height: 30px;
+    border-radius: 6px;
+    text-align: center;
+
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    background: rgba(255,255,255,0.3) !important;
+}
+
+.refbutton:nth-child(2) {
+    position: absolute;
+    top: 563px;
+    left: 1045px;
+}
+
+.refbutton:nth-child(1) {
+    position: absolute;
+    top: 563px;
+    left: 36px;
+}
+
+.button:hover {
+    background: rgba(0,0,0,0.4) !important;
+
+}
+
+.desc {
+    position: absolute;
+    left: 1048px;
+    top: 61px;
+    display:inline-block;
+    font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial, sans-serif ;
+    font-weight: 600;
+    font-size: 13px;
+    color: rgb(218, 229, 233);;
+    width: 200px;
+}
+
+a:hover{
+    color: #686868;
+    text-decoration: none;
+}
+
+.price {
+    position:absolute;
+    left: 1049px;
+    top: 531px;
+    color: rgb(218, 229, 233);
+    font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial, sans-serif ;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.toppanel{
+    width: 100%;
+    height: 34px;
+    background-color: rgba(26, 29, 26, 0.59);
+    margin: 0px 0px 0px 0px;  padding: 0;  border: 0;
+    vertical-align: baseline;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.title{
+    color: rgb(255, 255, 255);
+    font-family: cursive;
+    position: absolute;
+    left: 57px;
+    top: -1px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#infoRef {
+    border-bottom: 1px dashed rgb(218, 229, 233);;
+    color: rgb(218, 229, 233);;
+    /*color: rgb(125, 135, 138);*/
+}
+
+#infoRef:hover {
+    color: #FFFFFF;
+}
