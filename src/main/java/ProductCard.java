@@ -10,10 +10,10 @@ public class ProductCard extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        PrintWriter out = resp.getWriter();
-        RequestDispatcher rd = req.getRequestDispatcher("productcard.html");
-        resp.setContentType("text/html; charset=utf-8");
-        //out.println("Hello from servlet!");
-        rd.include(req, resp);
+            RequestDispatcher rd = req.getRequestDispatcher("productcard.html");
+            resp.setContentType("text/html; charset=utf-8");
+//        out.println("Hello from servlet!");
+            rd.include(req, resp);
+
     }
 }
