@@ -3,12 +3,12 @@
   <display-name>WebStore Application</display-name>
 
     <servlet>
-        <servlet-name>ProductCard</servlet-name>
-        <servlet-class>ProductCard</servlet-class>
+        <servlet-name>com.javaweb.servlets.ProductCard</servlet-name>
+        <servlet-class>com.javaweb.servlets.ProductCard</servlet-class>
     </servlet>
     
     <servlet-mapping>
-        <servlet-name>ProductCard</servlet-name>
+        <servlet-name>com.javaweb.servlets.ProductCard</servlet-name>
         <url-pattern>/card</url-pattern>
     </servlet-mapping>
 </web-app>

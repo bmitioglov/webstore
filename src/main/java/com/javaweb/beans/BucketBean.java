@@ -1,4 +1,4 @@
-package com.javaweb;
+package com.javaweb.beans;
 
 import java.io.Serializable;
 

@@ -22,12 +22,12 @@
             }
         }
     </script>
-    <jsp:useBean id="bucket" class="com.javaweb.BucketBean" scope="session"/>
+    <jsp:useBean id="bucket" class="com.javaweb.beans.BucketBean" scope="session"/>
 </HEAD>
 <BODY>
     Введите параметр фильтра
     <input name="filt" onkeyup="filter(this, 'tab1')" style="width:350px;" type="text" /><br />
-    <TABLE id="tab1" border datasrc="#booksprice">
+    <TABLE id="tab1" border>
         <THEAD>
         <TR style="font:x-small; font-weight:bold" bgcolor="yellow"
             align="center">
@@ -56,6 +56,6 @@
         </TBODY>
     </TABLE>
     <br>
-    <a href="#">Корзина (<jsp:getProperty name="bucket" property="amount"/>)</a>
+    <a href="/webstore/jsp/bucket.jsp">Корзина (<jsp:getProperty name="bucket" property="amount"/>)</a>
 </BODY>
 </HTML>
