@@ -7,9 +7,10 @@
     </head>
     <body>
     <h3>Корзина</h3>
-        ${f:tableGenerator(bucket.bucketList)}
-    <br>
+
     <form name="order" action="order.jsp">
+        ${f:tableGenerator(bucket.bucketList)}
+        <br>
         <input type="submit" value="Заказать товары">
     </form>
     </body>
