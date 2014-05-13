@@ -11,4 +11,5 @@ import java.util.List;
 public interface OrderDAO {
     public void addOrder(Order order) throws SQLException;
     public List<Order> getAllOrders() throws SQLException;
+    public int getOrderId(Order order) throws SQLException;
 }

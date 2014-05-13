@@ -3,6 +3,7 @@ package com.javaweb.DAO;
 
 import com.javaweb.entities.Order;
 import com.javaweb.util.HibernateUtil;
+import org.hibernate.Query;
 import org.hibernate.Session;
 
 import java.sql.SQLException;
@@ -41,5 +42,29 @@ public class OrderDAOImpl implements OrderDAO {
             }
         }
         return studs;
+    }
+
+    @Override
+    public int getOrderId(Order order) throws SQLException {
+        Session session = null;
+        List<Order> resultObj = null;
+        int id = 0;
+        try {
+            session = HibernateUtil.getSessionFactory().openSession();
+            Query query = session.createQuery("from Order where id = " +
+                    "(select MAX(id) from Order where userName = :username)");
+            query.setParameter("username", order.getUserName());
+            resultObj = query.list();
+            return resultObj.get(0).getId();
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (session != null && session.isOpen()) {
+                session.close();
+            }
+        }
+        return id;
     }
 }

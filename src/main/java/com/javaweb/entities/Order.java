@@ -15,8 +15,17 @@ public class Order {
 
     private String productId;
     private String storeName;
+    private String userName;
 
     public Order() {
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public Integer getId() {
