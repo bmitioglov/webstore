@@ -35,7 +35,7 @@ div {
     height: 492px;
     width: 987px;
     border: 2px solid #000;
-    background: url(../img/1.jpg) 100% 100% no-repeat;
+    /*background: url(../img/001.jpg) 100% 100% no-repeat;*/
     background-size: cover;
     margin: auto;
     position: absolute;

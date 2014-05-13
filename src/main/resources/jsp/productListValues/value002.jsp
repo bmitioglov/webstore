@@ -6,6 +6,6 @@
     <TD><DIV datafld="Price">320000</DIV></ТD>
         <input type="text" name="idvalue" value="002" hidden="true" />
     <td>Пейзажисты</td>
-    <td><a href="/webstore/card?id=002">Карточка товара</a></td>
+    <td><a href="/webstore/card?id=002&infotype=podr">Карточка товара</a></td>
     <td><input type="submit" value="В корзину"></td>
 </TR>

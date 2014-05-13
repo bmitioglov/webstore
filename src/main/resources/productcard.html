@@ -1,20 +1,47 @@
 <html>
     <head>
         <link rel="stylesheet" href="css/main.css">
+        <script>
+            function getParameterByName(name) {
+                name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                        results = regex.exec(location.search);
+                return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+            }
+
+            window.onload = function() {
+                var prodId = getParameterByName('id');
+                var infotype = getParameterByName('infotype');
+//                document.getElementById('showid').innerHTML=infotype;
+                var imgpath = "img/";
+                document.getElementById('img').src = imgpath.concat(prodId).concat(".jpg");
+                if (infotype == "kratko") {
+                    document.getElementById(prodId.concat("kratko")).style.display = 'inline';
+                }
+                else
+                {
+                    document.getElementById(prodId.concat("podr")).style.display = 'inline';
+                }
+
+
+            }
+
+        </script>
     </head>
     <body>
         <div class="toppanel">
             <a href="#">
-                <span class="title">PicStore</span>
+                <a href="/webstore/jsp/productList.jsp"><span class="title">PicStore</span></a>
             </a>
             <div class="loginpanel">
                 <a id="login" href="#">Log In </a>
                 <a id="signup" href="#">Sign Up</a>
             </div>
         </div>
-        <div class="img"></div>
-        <div class="desc"><b>Brig Mercury Attacked by Two Turkish Ships, 1892</b><br><br>
-            <a href="#" id="infoRef">Краткая информация</a><br>
+        <!--<div class="img"></div>-->
+        <img id="img" class="img">
+        <div class="desc" id="001podr" style="display: none;"><b>Brig Mercury Attacked by Two Turkish Ships, 1892</b><br><br>
+            <a href="/webstore/card?id=001&infotype=kratko" id="infoRef">Краткая информация</a><br>
             <br><b>Author:</b><br><br>
             <b>Ivan Konstantinovich Aivazovsky</b><br><br><b>About author:</b><br>(Russian:
             Ива́н Константи́нович Айвазо́вский; 29 July 18
@@ -22,7 +49,39 @@
             . He is considered one of the greatest marine artists in history. Baptized as Hovhannes Aivazian,
             Aivazovsky was born into an Armenian family in the Black Sea port of Feodosia and
             was mostly based in his native Crimea.<br><br> </div>
-        <div class="price">525000 Roubles</div>
+        <div class="desc" id="001kratko" style="display: none;"><b>Brig Mercury Attacked by Two Turkish Ships, 1892</b><br><br>
+            <a href="/webstore/card?id=001&infotype=podr" id="infoRef">Подробная информация</a><br>
+            <br><b>Author:</b><br><br>
+            <b>Ivan Konstantinovich Aivazovsky</b><br></div>
+        <div class="desc" id="002podr" style="display: none;"><b>Дом родителей в Чугуеве, 1892</b><br><br>
+            <a href="/webstore/card?id=002&infotype=kratko" id="infoRef">Краткая информация</a><br>
+            <br><b>Author:</b><br><br>
+            <b>Репин Алексей Фёдорович</b><br><br><b>About author:</b><br>(Russian:
+            Репин Алексей Фёдорович; 29 July 18
+            17 – 2 May 1900) was a Russian Romantic painter
+            . He is considered one of the greatest marine artists in history. Baptized as Hovhannes Aivazian,
+            Aivazovsky was born into an Armenian family in the Black Sea port of Feodosia and
+            was mostly based in his native Crimea.<br><br> </div>
+        <div class="desc" id="002kratko" style="display: none;"><b>Дом родителей в Чугуеве, 1892</b><br><br>
+            <a href="/webstore/card?id=002&infotype=podr" id="infoRef">Подробная информация</a><br>
+            <br><b>Author:</b><br><br>
+            <b>Репин Алексей Фёдорович</b><br></div>
+        <div class="desc" id="003podr" style="display: none;"><b>Лес, 1892</b><br><br>
+            <a href="/webstore/card?id=003&infotype=kratko" id="infoRef">Краткая информация</a><br>
+            <br><b>Author:</b><br><br>
+            <b>Шишкин Иван Алексеевич</b><br><br><b>About author:</b><br>(Russian:
+            Шишкин Иван Алексеевич
+            17 – 2 May 1900) was a Russian Romantic painter
+            . He is considered one of the greatest marine artists in history. Baptized as Hovhannes Aivazian,
+            Aivazovsky was born into an Armenian family in the Black Sea port of Feodosia and
+            was mostly based in his native Crimea.<br><br> </div>
+        <div class="desc" id="003kratko" style="display: none;"><b>Лес, 1892</b><br><br>
+            <a href="/webstore/card?id=003&infotype=podr" id="infoRef">Подробная информация</a><br>
+            <br><b>Author:</b><br><br>
+            <b>Шишкин Иван Алексеевич</b><br><br>
+            <br><br> </div>
+        <div class="price">525000 Roubles  </div>
+        <!--<div class="price" id="showid">;<br></div>-->
         <div class="buttonsgroup">
             <a href="#" class="refbutton" ><div class="button">Отзывы</div></a>
             <a href="#" class="refbutton"><div class="button">Send to Basket</div></a>
