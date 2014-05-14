@@ -11,4 +11,30 @@
         <servlet-name>com.javaweb.servlets.ProductCard</servlet-name>
         <url-pattern>/card</url-pattern>
     </servlet-mapping>
+
+
+    <security-constraint>
+        <display-name>TomcatConstraint</display-name>
+        <web-resource-collection>
+            <web-resource-name>tomcat</web-resource-name>
+            <description/>
+            <url-pattern>/jsp/order.jsp</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description/>
+            <role-name>tomcat</role-name>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <security-role>
+        <role-name>tomcat</role-name>
+        <role-name>admin</role-name>
+    </security-role>
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/jsp/login.jsp</form-login-page>
+            <form-error-page>/jsp/error.jsp</form-error-page>
+        </form-login-config>
+    </login-config>
 </web-app>

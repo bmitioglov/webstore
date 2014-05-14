@@ -1,4 +1,4 @@
-<html>
+<html xmlns="http://www.w3.org/1999/html">
     <head>
         <link rel="stylesheet" href="css/main.css">
         <script>
@@ -13,6 +13,7 @@
                 var prodId = getParameterByName('id');
                 var infotype = getParameterByName('infotype');
 //                document.getElementById('showid').innerHTML=infotype;
+                document.getElementById('bucketinput').value = prodId;
                 var imgpath = "img/";
                 document.getElementById('img').src = imgpath.concat(prodId).concat(".jpg");
                 if (infotype == "kratko") {
@@ -22,8 +23,6 @@
                 {
                     document.getElementById(prodId.concat("podr")).style.display = 'inline';
                 }
-
-
             }
 
         </script>
@@ -84,7 +83,10 @@
         <!--<div class="price" id="showid">;<br></div>-->
         <div class="buttonsgroup">
             <a href="#" class="refbutton" ><div class="button">Отзывы</div></a>
-            <a href="#" class="refbutton"><div class="button">Send to Basket</div></a>
+            <form name="1" method="post" action="jsp/updateBucket.jsp">
+                <input id="bucketinput" type="text" name="idvalue" hidden="true" />
+                <div class="refbutton"><input class="button" type="submit" value="Send to Basket"/></div>
+            </form>
         </div>
     </body>
 </html>

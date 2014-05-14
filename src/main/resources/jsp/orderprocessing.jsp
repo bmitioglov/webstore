@@ -31,8 +31,8 @@
     {
         order.setStoreName(request.getParameter("storeName"));
     }
-
-    order.setUserName("bomi");
+    String userName = request.getUserPrincipal().getName();
+    order.setUserName(userName);
     int orderId = 0;
 
     try {

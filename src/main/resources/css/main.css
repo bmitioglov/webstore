@@ -71,8 +71,15 @@ div {
     left: 36px;
 }
 
+.refbutton:hover{
+    cursor: pointer;
+    cursor: hand;
+}
+
 .button:hover {
     background: rgba(0,0,0,0.4) !important;
+    cursor: pointer;
+    cursor: hand;
 
 }
 
